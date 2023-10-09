@@ -1,0 +1,111 @@
+/* Reset styles for the entire page */
+body {
+    margin: 0;
+    margin-bottom: 100px;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Styles for your existing heading */
+h1 {
+    text-align: center;
+    background-image: linear-gradient(to right, #3a6073, #3a7bd5, #3a6073);
+    border-radius: 25px;
+    color: white;
+    font-size: 35px;
+    font-family: Monospace;
+    margin: 10px 0;
+    outline: 2px solid white;
+    outline-offset: -12px;
+    padding: 10px 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+
+.card_button {
+    background-color: #3a7bd5;
+    color: white;
+    padding: 10px 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.card_button:hover {
+    background-color: #3a7bd5;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    padding: 10px;
+}
+
+/* Additional styles for card game components (from previous code) */
+.card {
+    width: 100px;
+    height: 150px;
+    background-size: cover;
+    margin: 5px;
+    border: 1px solid #333;
+    display: inline-block;
+}
+
+.card[style*="display: none"] {
+    visibility: hidden;
+}
+
+.discard-pile {
+    width: 150px;
+    height: 200px;
+    background-color: #ccc;
+    border: 2px dashed #333;
+    margin: 10px;
+    display: inline-block;
+    position: relative; /* Add relative positioning */
+}
+
+/* Add a specific z-index value to ensure cards overlap */
+.discard-pile .card {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1; /* Adjust this value to control the overlap */
+}
+
+.card-placeholders {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+
+.card-placeholder {
+    width: 100px;
+    height: 150px;
+    margin: 5px;
+    border: 1px solid #333;
+    display: inline-block;
+}
+
+
+.card-container {
+    text-align: center;
+}
