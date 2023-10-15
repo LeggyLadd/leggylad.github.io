@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Assignment 7 - Drag and Drop</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Game</title>
+    <link rel="stylesheet" href="a7_style.css">
+</head>
+<body>
+    <h1>Assignment 7 - Drag and Drop</h1>
+    <button id="dealButton" class="card_button">Deal Cards</button>
+    <button id="resetButton" class="card_button">Reset</button>
+    <div id="discardPile" class="discard-pile" ondrop="handleDrop(event)" ondragover="allowDrop(event)"></div>
+    <div id="cardContainer" class="card-container">
+    </div>
+    <script src="a7_script.js"></script>
+    <footer><p></p>© 2023 Adrian Petria<p></p></footer>
+</body>
+</html>
