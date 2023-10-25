@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Interactive Canvas Animation</title>
+    <style src="a9_style.css" defer=""></style>
+    <link rel="stylesheet" href="a9_style.css">
+</head>
+
+<body>
+    <h1>Assignment 9 - Canvas Animation</h1>
+
+    <canvas id="animationCanvas" width="800" height="600"></canvas>
+    <div id="controls">
+        <button class="anim_button" id="spawn10" disabled>Spawn 10 objects</button>
+        <button class="anim_button" id="spawn50" disabled>Spawn 50 objects</button>
+        <button class="anim_button" id="spawn100" disabled>Spawn 100 objects</button>
+        <button class="anim_button" id="clear">Clear</button>
+    </div>
+
+    <p>Click and drag within the canvas to make objects converge near the mouse cursor.<br>You can spawn no more than
+        100 objects at a time <br> (this is because devices start slowing down significantly after that number).</p>
+
+    <script src="a9_script.js"></script>
+</body>
+
+</html>
