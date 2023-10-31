@@ -1,0 +1,153 @@
+/* Reset default margin and padding */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Header */
+header {
+    text-align: center;
+    background-image: linear-gradient(to right, #3a6073, #3a7bd5, #3a6073);
+    border-radius: 25px;
+    color: white;
+    text-align: center;
+    font-size: 22px;
+    font-style: normal;
+    font-family: Monospace;
+    margin-top: 10px;
+    outline: 2px solid white;
+    outline-offset: -12px;
+    padding: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    padding: 10px;
+}
+
+/* Main Container */
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 90%; /* Adjust this value for responsiveness */
+}
+
+/* Images */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Lists */
+ul, li {
+    text-align: center;
+    list-style-position: inside;
+}
+
+/* Navigation Menu */
+nav {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 25px;
+    text-align: center;
+    padding: 5px;
+    position: relative;
+    margin-top: 20px;
+    width: 90%; /* Adjust this value for responsiveness */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.submenu-button {
+    cursor: pointer;
+    background-color: #3754b0;
+    color: #fff;
+    padding: 15px 20px; /* Adjusted for better touch interaction */
+    margin: 15px; /* Adjusted for better spacing */
+    font-size: 18px; /* Adjusted for readability */
+}
+
+.submenu {
+    display: none;
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 800px;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    margin-top: 5px;
+}
+
+.submenu-button:focus + .submenu, .submenu:focus-within {
+    display: flex;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .container {
+        max-width: 90%; /* Adjust this value for responsiveness */
+    }
+
+    nav {
+        width: 90%; /* Adjust this value for responsiveness */
+    }
+
+    .submenu-button {
+        padding: 10px 15px; /* Adjusted for better touch interaction */
+        margin: 10px; /* Adjusted for better spacing */
+        font-size: 16px; /* Adjusted for readability */
+    }
+}
+
+/* Additional Submenu Styles */
+.submenu-button {
+    background-color: #3a7bd5;
+    border-radius: 15px;
+}
+
+.submenu-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.submenu-item {
+    background-color: #f0f0f0;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin: 5px;
+}
