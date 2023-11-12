@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BSN Quick Class Advisor</title>
+  <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+  <script src="a11_script.js"></script>
+  <link rel="stylesheet" href="a11_style.css">
+    <style src="a11_style.css" defer></style>
+</head>
+<body>
+  <h1>
+    BSN Quick Class Advisor
+  </h1>
+  <p>
+    This quick advisor allows for quick planning of course schedules. <br/><br/>
+    To use the planner, first, check all courses that you have previously completed. If you have taken a course equivalent to a specific one, you should check that course. Once you have completed checking all courses you have taken, you can plan courses directly by clicking on a course in any semester or use the automated tools to plan a draft schedule. You can create a printable schedule after completing your plans. This tool is meant to be a preliminary tool to help students in planning, and students should still seek regular advising.
+  </p>
+  <p><a href="https://daytonastate.smartcatalogiq.com/en/2023-2024/college-catalog/program-guides/bs-degree/nursing-bsn-b-s-degree/">Cick here to learn more about Daytona State College's BS Nursing Program!</a></p> 
+  <table>
+    <tr>
+      <td>
+        <input type="button" value="Fill Out Form and Click for Printable Schedule" id="print" class="printbutton"/><br/><br/>
+        <input type="button" value="Create a Part-Time Schedule (~6 hours/term)" id="hour_6" class="printbutton"/><br/><br/>
+        <input type="button" value="Create a Full-Time Schedule (>12 hours/term)" id="hour_12" class="printbutton"/>
+      </td>
+      <td style="padding: 10px;">
+        <div id="output">
+        </div>
+      </td>
+    </tr>
+    <tr></tr>
+  </table>
+  <br/><p>If you have taken a class - click the course in the first column. To plan a class - click the semester</p>
+  <br/>
+  <div id="message">
+
+  </div>
+  <table border="1" id="ctable">
+    <tbody>
+      <tr style="font-size: 30px; color: white; padding: 10px; background-color:#c711d8;">
+        <td>Click If Courses Taken</td>
+        <td colspan="6">Click to Schedule Class in Semester</td>
+      </tr>
+    </tbody>
+  </table>
+  <div id="box"></div>
+  <p>For best results use Chrome Browser, tested in Firefox OK, does not work in Edge browser</p>
+</body>
+</html>
