@@ -1,0 +1,160 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flappy Tarnished</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+		p{
+			width: 770px;
+			text-align: center;
+		}
+
+        header {
+            text-align: center;
+            background-image: linear-gradient(to right, #F37335, #FDC830, #F37335);
+            border-radius: 25px 25px 25px 25px;
+            color: white;
+            text-align: center;
+            font-size: 30px;
+            font-style: normal;
+            font-family: Monospace;
+            margin-top: 10px;
+            outline: 2px solid white;
+            outline-offset: -12px;
+            padding-top: 20px;
+            padding-right: 20px;
+            padding-bottom: 20px;
+            padding-left: 20px;
+            list-style-position: inside;
+            width: 770px;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            padding: 10px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 770px;
+        }
+
+        #c2canvasdiv {
+            margin: auto;
+            width: 854px;
+            height: 480px;
+            border: 10px solid black;
+            overflow: hidden;
+        }
+
+        canvas {
+            display: block;
+            margin: auto;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<footer>
+	© 2023 Adrian Petria
+</footer>
+<body>
+    <header>Assignment 14 - Flappy Tarnished</header>
+	<p><b>HOW TO PLAY:</b><br><br> To start playing, simply press the start button. The <i>Tarnished</i>, riding a physics-defying horse, has to avoid all the obstacles on their endless journey to become the <i>Elden Lord</i>. You can help him get there by left-clicking the mouse within the game in order to make the horse bounce. You will receive a point each time the player passes an obstacle, and the game will tell you how well you did at the end of the each run. Good luck!<br><br></p>
+    <div id="fb-root"></div>
+    <div style="text-align: center;">
+
+        <script>
+            (function(){
+                if (window.location.protocol.substr(0, 4) === "file") {
+                    alert("Exported games won't work until you upload them. (When running on the file:/// protocol, browsers block many features from working for security reasons.)");
+                }
+            })();
+        </script>
+
+        <div id="c2canvasdiv">
+            <canvas id="c2canvas" width="854" height="480">
+                Your browser does not appear to support HTML5.  Try upgrading your browser to the latest version.  <a href="http://www.whatbrowser.org">What is a browser?</a>
+                <br/><br/><a href="http://www.microsoft.com/windows/internet-explorer/default.aspx">Microsoft Internet Explorer</a><br/>
+                <a href="http://www.mozilla.com/firefox/">Mozilla Firefox</a><br/>
+                <a href="http://www.google.com/chrome/">Google Chrome</a><br/>
+                <a href="http://www.apple.com/safari/download/">Apple Safari</a><br/>
+            </canvas>
+        </div>
+
+        <br />
+
+        <a href="https://www.construct.net" target="_blank" style="font-family:Arial;color:DodgerBlue;" title="Make a game">Made with Construct &mdash; the HTML5 game maker</a>
+
+    </div>
+
+    <script src="jquery-3.4.1.min.js"></script>
+    <script src="c2runtime.js"></script>
+
+    <script>
+        jQuery(document).ready(function () {
+            cr_createRuntime("c2canvas");
+        });
+
+        function onVisibilityChanged() {
+            if (document.hidden || document.mozHidden || document.webkitHidden || document.msHidden)
+                cr_setSuspended(true);
+            else
+                cr_setSuspended(false);
+        }
+
+        document.addEventListener("visibilitychange", onVisibilityChanged, false);
+        document.addEventListener("mozvisibilitychange", onVisibilityChanged, false);
+        document.addEventListener("webkitvisibilitychange", onVisibilityChanged, false);
+        document.addEventListener("msvisibilitychange", onVisibilityChanged, false);
+
+        function OnRegisterSWError(e) {
+            console.warn("Failed to register service worker: ", e);
+        }
+
+        window.C2_RegisterSW = function C2_RegisterSW() {
+            if (!navigator.serviceWorker)
+                return;
+
+            try {
+                navigator.serviceWorker.register("sw.js", { scope: "./" })
+                    .then(function (reg) {
+                        console.log("Registered service worker on " + reg.scope);
+                    })
+                    .catch(OnRegisterSWError);
+            }
+            catch (e) {
+                OnRegisterSWError(e);
+            }
+        };
+    </script>
+</body>
+</html>
